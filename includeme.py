@@ -4,9 +4,8 @@ from openprocurement.api.interfaces import IContentConfigurator
 from openprocurement.api.configurator import Configurator
 
 config = {
-    'AUCTION_ID': 'AU-PS'
+    'AUCTION_PREFIX': 'AU-PS'
 }
 
-def set_up():
-    import pdb; pdb.set_trace()
+def includeme(*args, **kwargs):
     getGlobalSiteManager().registerUtility(Configurator(config, {}), IContentConfigurator)

@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 entry_points = {
     'openprocurement.api.plugins': [
-        'configurator = openprocurement.configurator.set_configurator:set_up'
+        'configurator = includeme:includeme'
     ]
 }
 requires = [
