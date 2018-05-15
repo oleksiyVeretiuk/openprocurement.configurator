@@ -2,7 +2,7 @@ import os
 from setuptools import setup, find_packages
 
 entry_points = {
-    'openprocurement.api.plugins': [
+    'openprocurement.api.configurator': [
         'configurator = includeme:includeme'
     ]
 }

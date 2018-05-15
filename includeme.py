@@ -1,6 +1,6 @@
 from zope.component import getGlobalSiteManager
 
-from openprocurement.api.interfaces import IContentConfigurator
+from openprocurement.api.interfaces import IProjectConfigurator
 from openprocurement.api.configurator import Configurator
 
 config = {
@@ -8,4 +8,4 @@ config = {
 }
 
 def includeme(*args, **kwargs):
-    getGlobalSiteManager().registerUtility(Configurator(config, {}), IContentConfigurator)
+    getGlobalSiteManager().registerUtility(Configurator(config, {}), IProjectConfigurator)
